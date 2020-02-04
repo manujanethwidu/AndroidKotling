@@ -48,7 +48,7 @@
         android:text="Share to other apps" />
 
     <Button
-        android:id="@+id/btnHobbies"
+        android:id="@+id/btnRecycleViewDemo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"

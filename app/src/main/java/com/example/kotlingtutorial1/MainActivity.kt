@@ -38,8 +38,9 @@ class MainActivity : AppCompatActivity() {
 
 
         }
-        btnHobbies.setOnClickListener{
-            val intent = Intent(this,HobbiesActivity::class.java)
+        btnRecycleViewDemo.setOnClickListener{
+            val intent = Intent(this,Hobbies::class.java)
+
             startActivity(intent)
         }
     }
