@@ -21,10 +21,22 @@ class MainActivity : AppCompatActivity() {
         btnSendMsgtoNextActivity.setOnClickListener{
 
             val message:String = etUserMessage.text.toString()
-            Toast.makeText(this,message,Toast.LENGTH_SHORT).show()
 
+
+            //we are using explicent intent
             val intent = Intent(this,SecondActivity::class.java)
+            intent.putExtra("user_msg",message)
             startActivity(intent)
+        }
+        btnShare.setOnClickListener{
+            val message:String = etUserMessage.text.toString()
+            val intent = Intent()
+            intent.action = Intent.ACTION_SEND
+            intent.putExtra(Intent.EXTRA_TEXT,message)
+            intent.type = "text/plain"
+            startActivity(Intent.createChooser(intent,"Share to"))
+
+
         }
     }
 }
