@@ -38,5 +38,9 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+        btnHobbies.setOnClickListener{
+            val intent = Intent(this,HobbiesActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
