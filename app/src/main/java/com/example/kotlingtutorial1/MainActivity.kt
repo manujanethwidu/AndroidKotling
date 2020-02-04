@@ -1,5 +1,6 @@
 package com.example.kotlingtutorial1
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -15,6 +16,15 @@ class MainActivity : AppCompatActivity() {
         btnShowToast.setOnClickListener{
             Log.i("Main Activity","Button was clicked")
             Toast.makeText(this,"Button was clicked",Toast.LENGTH_SHORT).show()
+        }
+
+        btnSendMsgtoNextActivity.setOnClickListener{
+
+            val message:String = etUserMessage.text.toString()
+            Toast.makeText(this,message,Toast.LENGTH_SHORT).show()
+
+            val intent = Intent(this,SecondActivity::class.java)
+            startActivity(intent)
         }
     }
 }

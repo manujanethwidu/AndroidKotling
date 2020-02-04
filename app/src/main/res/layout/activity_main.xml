@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="10dp">
 
 
     <Button
@@ -15,4 +16,25 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:text="Show Toast" />
+
+    <EditText
+        android:id="@+id/etUserMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:text=""
+        android:hint="Enter ur Msg"
+        />
+
+    <Button
+        android:id="@+id/btnSendMsgtoNextActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:text="Send Data to Next Activity" />
 </RelativeLayout>
